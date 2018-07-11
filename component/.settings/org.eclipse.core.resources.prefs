@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/app/app.component.html=UTF-8
+encoding//src/app/framework-componets/layout-comp=UTF-8
+encoding//src/app/framework-componets/layout-comp/flowLayout.component.html=UTF-8
+encoding//src/app/framework-componets/layout-comp/lineLayout.component.html=UTF-8
+encoding//src/app/framework-componets/layout-comp/masonryLayout.component.html=UTF-8
+encoding//src/app/framework-componets/layout-comp/masonryLayout.component.ts=UTF-8
+encoding//src/app/framework-componets/slider-comp/slider.component.html=UTF-8
+encoding//src/app/framework-componets/tab-comp/tab.component.html=UTF-8
+encoding//src/app/framework-componets/toolbar-comp/toolbar.component.html=UTF-8
+encoding//src/app/sample-code/layout-samp/layoutSample.component.html=UTF-8
+encoding//src/app/sample-code/slider-samp/sliderSample.component.html=UTF-8
+encoding//src/app/sample-template/home-page/homePage.component.html=UTF-8
+encoding//src/app/sample-template/login-page/loginpage/loginPage.component.html=UTF-8
+encoding//src/index.html=UTF-8
+encoding/<project>=UTF-8

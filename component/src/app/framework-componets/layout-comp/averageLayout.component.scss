@@ -1,0 +1,25 @@
+.average_layout_horizontal{
+	-webkit-box-orient: horizontal;
+	display: -webkit-box;
+}
+
+.average_layout_horizontal>div{
+	-webkit-box-flex: 1;
+}
+.average_layout_horizontal .averae_layout_item{
+	-webkit-box-flex: 1;
+}
+
+
+.average_layout_vertical{
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+}
+
+.average_layout_vertical div{
+	-webkit-box-flex: 1;
+}
+
+.averae_layout_item{
+	-webkit-box-flex: 1;
+}

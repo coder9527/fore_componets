@@ -1,0 +1,76 @@
+.login_area{
+	width: 432px;
+    position: absolute;
+    right: 250px;
+    top: 100px;
+    padding-left:32px;
+    padding-right:32px;
+}
+
+.login_area:hover{
+	-moz-box-shadow:8px 8px 10px #999999; -webkit-box-shadow:8px 8px 10px #999999; box-shadow:8px 8px 10px #999999;
+}
+
+.login_input{
+  width:368px;
+	height:48px;
+	border:1px solid #eee;
+	margin-bottom:14px; 
+}
+.login_valicode{
+	width:368px;
+	height:48px;
+	margin-bottom:14px;
+}
+
+.login_btn{
+	width:368px;
+	height:50px;
+	background-color:#ef5b00;
+	border:none;
+	color:#fff;
+}
+.login_title{
+	color:#f56600;
+	font-size: 24px;
+	margin-top:27px;
+	margin-bottom:24px;
+}
+
+.login_tail{
+	font-size:14px;
+	text-align:right;
+     color: #999;
+     margin-top:10px;
+     width:368px;
+}
+
+.login_line{
+	border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    width:368px;
+}
+.login_line_text{
+	font-size: 14px;
+    color: #b0b0b0;
+    text-align:center;
+    width:100px;
+}
+.login_line_area{
+	margin-top:30px;
+	
+
+}
+.login_icon{
+	color: #666;
+	margin-bottom:25px;
+	margin-left:15px;
+}
+
+
+
+.fa-stack-2x:hover{
+	 color: #ef5b00;
+}
+
+

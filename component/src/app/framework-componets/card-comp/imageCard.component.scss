@@ -1,0 +1,59 @@
+/**
+  卡片类型1:垂直卡片
+*/
+.image_card{
+	text-align: center;
+	background-color:#fff;
+	height:300px;
+	-moz-transition:ease-out 0.3s;
+    -o-transition:ease-out 0.3s;
+    -webkit-transition:ease-out 0.3s;
+    transition:ease-out 0.3s;
+}
+
+.image_card:hover{
+	-moz-box-shadow:8px 8px 10px #999999; -webkit-box-shadow:8px 8px 10px #999999; box-shadow:8px 8px 10px #999999;
+	transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    -moz-transform: translate(0, -5px);
+    -o-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+}
+
+.image_card img{
+	margin-top:5px;
+	max-width: 85%;
+}
+
+/**
+  卡片类型2:水平卡片
+*/
+
+.image_card_horizontal{
+	display:inline-flex;
+	background-color:#fff;
+	-moz-transition:ease-out 0.3s;
+    -o-transition:ease-out 0.3s;
+    -webkit-transition:ease-out 0.3s;
+    transition:ease-out 0.3s;
+}
+
+.image_card_horizontal:hover{
+	-moz-box-shadow:8px 8px 10px #999999; -webkit-box-shadow:8px 8px 10px #999999; box-shadow:8px 8px 10px #999999;
+	transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    -moz-transform: translate(0, -5px);
+    -o-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+}
+
+
+.image_card_horizontal img{
+	width:70%;
+	height:300px;
+}
+.image_card_horizontal div{
+	text-align: center;
+    width: 30%;
+    background-color: #fff;
+}
