@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 
-//import * as SwiperAnimate from 'swiper-animate/swiper.animate1.0.2.min.js';
+// import * as SwiperAnimate from 'swiper-animate/swiper.animate1.0.2.min.js';
 
 @Component({
     selector   : 'app-slider',
@@ -21,8 +21,8 @@ export class SliderComponent implements OnInit {
 
     ngAfterViewInit() {
        // this.initView();
-        //console.log('xxxxxxx' + JSON.stringify(this.picPaths));
-       //console.log('xxxxxxx' + JSON.stringify(this.picPaths.length));
+        // console.log('xxxxxxx' + JSON.stringify(this.picPaths));
+       // console.log('xxxxxxx' + JSON.stringify(this.picPaths.length));
        const mySwiper = new Swiper('.swiper-container', {
               autoplay: true,
               mode : 'horizontal',
@@ -31,7 +31,7 @@ export class SliderComponent implements OnInit {
               updateOnImagesReady : true,
               preloadImages: false,
               lazyLoading : true,
-             //移动端使用  simulateTouch:false,
+             // 移动端使用  simulateTouch:false,
               observer: true,
               observeParents: true,
               effect : 'slide', // fade cube coverflow flip
@@ -46,14 +46,14 @@ export class SliderComponent implements OnInit {
               scrollbar: {
                 el: '.swiper-scrollbar',
               },
-              on:{
-                init: function(){
-                  swiperAnimateCache(this); //隐藏动画元素 
-                  swiperAnimate(this); //初始化完成开始动画
-                }, 
-                slideChangeTransitionEnd: function(){ 
-                  swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-                } 
+              on: {
+                init: function() {
+                  swiperAnimateCache(this); // 隐藏动画元素
+                  swiperAnimate(this); // 初始化完成开始动画
+                },
+                slideChangeTransitionEnd: function() {
+                  swiperAnimate(this); // 每个slide切换结束时也运行当前slide动画
+                }
               }
             });
 
@@ -61,7 +61,7 @@ export class SliderComponent implements OnInit {
     }
     ngOnInit () {
          this.picPaths = this.picPaths.toString().split(',');
-         
+
 
 
 

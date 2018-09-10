@@ -1,0 +1,28 @@
+<div class="mainPage">
+	<div class="corp_bar"><div class="corp_name">质袜世嘉</div>   <div class="corp_user"></div></div>
+	<div class="toolbar"><span class="sub_title"></span><input  id="IpAddr" type="text" value="192.168.199.143"/><div class="btn btn-primary sync" (click)="updateAll($event)" >一键同步数据</div></div>
+	<div class="item" *ngFor="let product of itemProducts;" >
+		<div class="pic_l">
+			<img src="http://192.168.199.143{{product.picUrl}}" class="product_img"/>
+		</div>
+		<div class="info_m">
+			<div>{{product.productName}}</div>
+			<div class="attr"><span>编号：</span>{{product.productNo}}</div>
+			<div class="attr"><span>库存数量：</span>{{product.countNum}}个</div>
+			<div class="attr"><span>仓库编号：</span>{{product.repertoryNum}}</div>
+			
+		</div>
+		
+		<div class="operate_r">
+			<span class="line_in"   (click)="repertoryUpdate($event,'out',product)" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-circle-right green_cor" aria-hidden="true"></i> 出库 </span>
+			<span class="line_in" (click)="repertoryUpdate($event,'in',product)" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-circle-left red_cor" aria-hidden="true"></i> 入库</span>
+		</div>
+	</div>
+	
+	<app-dialog [dialogTitle]="'进出库'" (confirmCall)="confirmEvent($event)">
+		<div class="in-box">出库货物数：<input id="out_number" value="0" type="number"  class="in_number_box" min=0/> 双</div>
+		<div class="in-box">入库货物数：<input id="in_number" value="0" type="number"  class="in_number_box" min=0 /> 双</div>
+	</app-dialog>
+
+</div>
+

@@ -8,13 +8,13 @@ import { FrameworkServiceModule } from './framework-services/frameworkservice.mo
 import { HttpClientService } from './framework-services/network-ser/httpclientservice.service';
 import { FrameworkRoutingModule } from './router.module';
 import { SampleModule } from './sample-code/sample.module';
-import { TabSampComponent } from './sample-code/tab-samp/tabSamp.component';
 import { BlogPageComponent } from './sample-template/blog-page/blogPage.component';
 import { HomePageComponent } from './sample-template/home-page/homePage.component';
 import { ProductGridPageComponent } from './sample-template/productGrid-page/productGridPage.component';
 import { LoginPageComponent } from './sample-template/login-page/loginpage/loginPage.component';
 import { RegistePageComponent } from './sample-template/login-page/registepage/registePage.component';
-
+import { RepertoryMainPageComponent } from './sample-template/repertory-m-page/repertoryMainPage.component';
+import { RepertoryHomePageComponent } from './sample-template/repertory-m-page/repertoryHomePage.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +24,15 @@ import { RegistePageComponent } from './sample-template/login-page/registepage/r
     LoginPageComponent,
     RegistePageComponent,
     BlogPageComponent,
-    TabSampComponent
+    RepertoryMainPageComponent,
+    RepertoryHomePageComponent
   ],
   imports: [
     BrowserModule,
     FrameworkRoutingModule,
     FrameworkModule,
-    FrameworkServiceModule
+    FrameworkServiceModule,
+    SampleModule
   ],
   providers: [
     

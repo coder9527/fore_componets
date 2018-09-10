@@ -10,6 +10,7 @@ declare var swiperAnimateCache:any;
 
 declare var swiperAnimate:any;
 
+declare var WebUploader:any;
 
 declare var codeVerify:any;
 

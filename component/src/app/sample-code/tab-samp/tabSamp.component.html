@@ -1,1 +1,5 @@
-<app-tab></app-tab>
+<app-tab [tabItems]="['page1','page2','page3']"  (tabIndexCall)="tabEvent($event)">
+	<div>this is page 1</div>
+	<div>this is page 2</div>
+	<div>this is page 3</div>
+</app-tab>

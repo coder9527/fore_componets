@@ -5,6 +5,7 @@
 
 .swiper-container img{
 	width:100%;
+	height:100%;
 }
 
 .poi{
@@ -13,13 +14,13 @@
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
-	left:150px;
+	/*left:150px;*/
 }
 
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
-	margin-left:300px;
+	/*margin-left:300px;*/
 }
 
 .swiper-container-horizontal>.swiper-scrollbar{
-	left:300px;
+	/*left:300px;*/
 }

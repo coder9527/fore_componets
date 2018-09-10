@@ -24,6 +24,7 @@
 		"../node_modules/swiper-animate/animate.min.css",
 		"../node_modules/font-awesome/css/font-awesome.css",
 		"../src/assets/lib/verify-master/css/verify.css",
+		"../node_modules/webuploader/dist/webuploader.css",
 		"styles.css"
       ],
       "scripts": [
@@ -31,7 +32,8 @@
 		"../node_modules/swiper/dist/js/swiper.min.js",
 		"../node_modules/swiper-animate/swiper.animate1.0.2.min.js",
 		"../src/assets/lib/verify-master/js/verify.js",
-		"../node_modules/bootstrap/dist/js/bootstrap.js"
+		"../node_modules/bootstrap/dist/js/bootstrap.js",
+		"../node_modules/webuploader/dist/webuploader.js"
 		],
       "environmentSource": "environments/environment.ts",
       "environments": {

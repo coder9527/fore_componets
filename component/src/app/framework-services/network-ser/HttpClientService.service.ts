@@ -29,12 +29,12 @@ export class HttpClientService {
    * 异步网络请求
    */
   
-  httpAsyncPost(url:string){
+  httpAsyncPost(url:string,data:any){
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     
     return new Promise((resolve,reject)=>{
-        this.http.post(url, JSON.stringify({ 'id': '1' }), options).toPromise().then(reponse=>{
+        this.http.post(url, JSON.stringify(data), options).toPromise().then(reponse=>{
             console.log("ret:"+JSON.stringify(reponse));
             resolve(reponse['_body']);
         }).catch(error=>{

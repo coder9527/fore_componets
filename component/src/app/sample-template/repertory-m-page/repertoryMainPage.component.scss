@@ -1,0 +1,117 @@
+.mainPage{
+	width:100%;
+	height:99%;
+	background-color:#f4f4f4;
+	overflow-x:hidden;
+}
+
+.corp_bar{
+	width:100%;
+	display: inline-flex;
+	height: 55px;
+    background-color: #fff;
+}
+.corp_name{
+	width:60%;
+	padding-top: 15px;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.corp_user{
+	width:60px;
+	padding-top: 15px;
+    color: #aaa;
+}
+
+.item{
+	display:inline-flex;
+	width:100%;
+	margin-top: 10px;
+    background-color: #fff;
+    height: 120px;
+}
+
+.product_img{
+	width: 80px;
+    height: 80px;
+    display: block;
+}
+
+.pic_l{
+ width:80px;
+ height:80px;
+ margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.info_m{
+	display:inline;
+	width:100%;
+	margin-top: 12px;
+}
+.attr{
+    font-size: 13px;
+}
+.attr span{
+	width:80px;
+	color: #aaa;
+}
+.operate_r{
+    padding-right: 15px;
+    display: inline;
+}
+.line_in{
+	line-height:55px;
+	display: block;
+    width: 80px;
+}
+.green_cor{
+  color:green;
+}
+.red_cor{
+	color:red;
+}
+.in_number_box{
+	border: 1px solid #eee;
+	width:50px;
+}
+.in-box{
+	text-align:center;
+	margin-bottom: 10px;
+}
+/deep/ .modal-dialog{
+ margin-top:130px;
+}
+
+#IpAddr{
+	border: 0px;
+	width:0px;
+	height:0px;
+}
+
+.sync{
+	width: 120px;
+    height: 40px;
+    margin-right: 10px;
+}
+.toolbar{
+	display:inline-flex;
+	width: 100%;
+    margin-top: 10px;
+    background-color: #fff;
+    vertical-align: middle;
+    line-height: 40px;
+    padding-left:10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.sub_title{
+	width:75%;
+	color: #ee0000;
+}
+
+
+
+
+
