@@ -52,10 +52,10 @@
 	background-color:#eee;
 	
 }
-/deep/.contends_items div{
+:host /deep/.contends_items > div{
 	display:none;
 }
 
-/deep/.contends_items .active{
+:host /deep/.contends_items > .active{
 	display:block;
 }

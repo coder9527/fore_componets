@@ -15,6 +15,8 @@ import { LoginPageComponent } from './sample-template/login-page/loginpage/login
 import { RegistePageComponent } from './sample-template/login-page/registepage/registePage.component';
 import { RepertoryMainPageComponent } from './sample-template/repertory-m-page/repertoryMainPage.component';
 import { RepertoryHomePageComponent } from './sample-template/repertory-m-page/repertoryHomePage.component';
+import { RepertoryManagerComponent } from './sample-template/repertory-web-page/repertoryManager.component';
+import { YogaHomeComponent } from './sample-template/yoga-web-page/yogahome.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { RepertoryHomePageComponent } from './sample-template/repertory-m-page/r
     RegistePageComponent,
     BlogPageComponent,
     RepertoryMainPageComponent,
-    RepertoryHomePageComponent
+    RepertoryHomePageComponent,
+    RepertoryManagerComponent,
+    YogaHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,7 @@ import { RepertoryHomePageComponent } from './sample-template/repertory-m-page/r
     FrameworkModule,
     FrameworkServiceModule,
     SampleModule
+    
   ],
   providers: [
     

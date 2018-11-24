@@ -10,6 +10,7 @@ import { RepertoryMainPageComponent } from './sample-template/repertory-m-page/r
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, ModuleWithProviders } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { YogaHomeComponent } from './sample-template/yoga-web-page/yogahome.component';
 
 
 const appRoutes: Routes = [
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   { path: 'upfileSample', component: UploaderSampComponent},
   { path: 'repHome', component: RepertoryHomePageComponent},
   { path: 'repList', component: RepertoryMainPageComponent},
+  { path: 'yoga', component: YogaHomeComponent},
 ];
 
 export const FrameworkRoutingModule: ModuleWithProviders = RouterModule.forRoot(appRoutes);

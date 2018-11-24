@@ -1,0 +1,23 @@
+<div>
+  <app-toolbar></app-toolbar>
+
+  <app-lineLayout [orientType]="'horizontal'">
+    <div class="yoga_main_left">
+      <li>项目一</li>
+      <li>项目一</li>
+      <li>项目一</li>
+    </div>
+    <div class="yoga_main_middle">
+       <app-lineLayout [orientType]="'vertical'">
+         <div class="slide">
+			 <app-slider  picPaths={{picUrls}}></app-slider>
+		</div>
+       </app-lineLayout>
+    </div>
+    <div class="yoga_main_right">
+      <app-lineLayout [orientType]="'vertical'">
+           右边的动态
+       </app-lineLayout>
+    </div>
+  </app-lineLayout>
+</div>

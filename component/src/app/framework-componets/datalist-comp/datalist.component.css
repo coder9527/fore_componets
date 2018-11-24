@@ -1,0 +1,40 @@
+.dataList{
+	width:100%;
+	opacity: 1;
+}
+
+.dataList tr{
+	color: #000;
+	opacity: 0.6;
+}
+
+.odd_line{
+	background-color:#eee;
+}
+
+.dataList .thead{
+	background-color:#eee;
+}
+.dataList tbody tr:hover{
+	opacity: 0.8;
+	background-color:#eee;
+}
+
+
+.dataList tr th{
+	height: 50px;
+}
+
+.dataList tbody tr td{
+	height: 55px;
+	vertical-align: middle;
+	border-top: 1px solid rgba(255,255,255,0.3);
+}
+.checkbox{
+	width:18px;
+	height:18px;
+}
+
+.ck_col{
+	text-align:center;
+}

@@ -1,0 +1,21 @@
+<app-dialog #appDialog> 测试 元素</app-dialog>
+<table class="dataList">
+	<tr class="thead">
+	  <th *ngIf="showCheckBox" class="ck_col" ><input (click)="checkAll($event)" class="checkbox" type="checkbox" [(ngModel)]="checkallitems" /></th>
+	  <th *ngIf="showSequence" >序号</th>
+	  <th  *ngFor="let head of title;let i=index" >{{head}}</th>
+	  <th *ngIf="operationstate">操作</th>
+	</tr>
+	<tr *ngFor="let dataItems of datas;let i=index" [ngClass]="{'odd_line':i%2==1}">
+	    <td *ngIf="showCheckBox"  class="ck_col" ><input class="checkbox" type="checkbox"  [(ngModel)]="dataItems.check" /></td>
+		<td *ngIf="showSequence" >{{i+1}}</td>
+		<td *ngFor="let item of dataItems" >
+			{{item}}
+		</td>
+		<td *ngIf="operationstate">
+			<span (click)="showDialog()">编辑</span>
+			<span (click)="showDialog()">删除</span>
+		</td>
+	</tr>
+</table>
+

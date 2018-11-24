@@ -1,0 +1,10 @@
+<!-- <app-toolbar></app-toolbar>-->
+<!-- ['商品管理','仓库管理','库存统计','客户管理'] -->
+<app-tab [tabItems]="['1','2','3','4']"  (tabIndexCall)="tabEvent($event)" > 
+	<div>
+		<app-datalist [dataOptions]="dataListData"></app-datalist>
+	</div>
+	<div>仓库管理,正在建设中...</div>
+	<div>库存统计,正在建设中...</div>
+	<div>客户管理,正在建设中...</div>
+</app-tab><!---->

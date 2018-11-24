@@ -3,7 +3,7 @@
 	<div class="toolbar"><span class="sub_title"></span><input  id="IpAddr" type="text" value="192.168.199.143"/><div class="btn btn-primary sync" (click)="updateAll($event)" >一键同步数据</div></div>
 	<div class="item" *ngFor="let product of itemProducts;" >
 		<div class="pic_l">
-			<img src="http://192.168.199.143{{product.picUrl}}" class="product_img"/>
+			<img src="{{product.picUrl}}" class="product_img"/>
 		</div>
 		<div class="info_m">
 			<div>{{product.productName}}</div>

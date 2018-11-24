@@ -1,0 +1,8 @@
+:host /deep/ .tab_line_item .active{
+	border-bottom: 1px solid #eee;
+}
+
+:host /deep/ .tab_contend >.contends_items{
+	background-color:#fff;
+	padding-top: 30px;
+}

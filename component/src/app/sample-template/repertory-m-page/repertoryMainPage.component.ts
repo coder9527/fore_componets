@@ -1,3 +1,4 @@
+import { BaseService } from '../../framework-services/base-ser/BaseService.service';
 import { HttpClientService } from '../../framework-services/network-ser/httpclientservice.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -5,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-repertoryMainPage',
   templateUrl: './repertoryMainPage.component.html',
   styleUrls: ['./repertoryMainPage.component.scss'],
-  providers: [HttpClientService]
+  providers: [HttpClientService,BaseService]
 })
 export class RepertoryMainPageComponent implements OnInit {
 
   private httpClientService: HttpClientService;
+  
+  private baseService:BaseService;
 
 
   public itemProducts:  Array<any>=[];
@@ -24,8 +27,6 @@ export class RepertoryMainPageComponent implements OnInit {
 
    ngOnInit() {
 
-  
-    
      let that=this;
      console.log("init:"+JSON.stringify(localStorage.getItem("data")));
      let temp_data=localStorage.getItem("data")==null?[]:JSON.parse(localStorage.getItem("data")) as any;
@@ -34,35 +35,33 @@ export class RepertoryMainPageComponent implements OnInit {
         temp_data[i].edit=false;
         that.itemProducts.push(temp_data[i]);
       }
-     
-   
   }
   
-  public getRemoteData(){
+  public async getRemoteData(){
     let ip=$("#IpAddr").val();
 
     let that=this;
     let temp =  this.httpClientService.httpAsyncGet("http://"+ip+"/getRepertoryList").then(reponse=>{
       console.log("res2:"+JSON.stringify(reponse));
       reponse=JSON.parse(reponse);
-     // localStorage.setItem("data",reponse);
+      // localStorage.setItem("data",reponse);
       for(let i=0;i<reponse.length;i++){
         reponse[i].edit=false;
+        reponse[i].picUrl=this.baseService.img2base64("http://"+ip+reponse[i].picUrl,'anonymous');
+
+        console.log("=======>>>>>>:"+JSON.stringify(reponse[i].picUrl));
+        console.log("pic url:"+reponse[i].picUrl);
         that.itemProducts.push(reponse[i]);
       }
-      
       localStorage.setItem("data",JSON.stringify(that.itemProducts));
-      
       $(".sync").text("暂无更新数据");
       $(".sub_title").text("");
-      
     }).catch(error=>{
+      let ip=$("#IpAddr").val();
+      console.log("------>>>>"+ip);
 
-     
-      
     });
   }
-  
   
   public async updateAll(event:any){
      let that=this;
