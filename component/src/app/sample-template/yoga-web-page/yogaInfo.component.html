@@ -1,0 +1,177 @@
+<div class="head">
+  <app-toolbar></app-toolbar>
+  <div class="logo_detail">
+    <div class="logo_text">瑜 伽 在 线</div>
+    <div class="logo_text mgt10">YoGa change your life</div>
+  </div>
+  <div>
+    <img class="fir_icon" src="/assets/images/yogores/icon4.jpg">
+    <img class="sec_icon" src="/assets/images/yogores/icon2.jpg">
+    <img class="thi_icon" src="/assets/images/yogores/icon3.jpeg">
+    <img class="fou_icon" src="/assets/images/yogores/icon1.jpg">
+  </div>
+  <div class="site_search">
+    <span class="search_icon"></span>
+    <input type="text" class="search_box" />
+    <span class="search_btn">搜 索</span>
+  </div>
+
+</div>
+
+
+<div class="yoga_menu" #yogaMenu>
+  <div class="yoga_menu_item"  (click)="menuClick($event,0)" [routerLink]="['/yoga']" >首 页</div>
+  <div class="yoga_menu_item selected"  (click)="menuClick($event,1)" [routerLink]="['/yogaInfo']" >瑜伽资讯</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,2)" [routerLink]="['/YogaVideos']">瑜伽视频</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,3)" [routerLink]="['/YogaAudio']">瑜伽之声</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,4)">伽客群</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,5)">伽客问答</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,6)">瑜伽馆</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,7)">伽客超市</div>
+</div>
+
+
+<app-lineLayout [orientType]="'horizontal'">
+  <div class="yoga_main_left">
+    <app-slider  class="img_scroll" picPaths={{picUrls}}  [sildeOptions]="sildeOptions" ></app-slider>
+  </div>
+
+  <div class="yoga_main_middle">
+    <div class="menu_modle_tit">
+      <div class="menu_modle_tit_tab">热门</div>
+      <div class="menu_modle_subtit">Hot Point</div>
+    </div>
+
+    <div class="hot_new" *ngFor="let hotNew of hotNews;" ><i class="dot"></i>{{hotNew.title}}</div>
+  </div>
+
+
+  <div class="yoga_main_right">
+  </div>
+
+
+</app-lineLayout>
+
+<app-lineLayout [orientType]="'horizontal'">
+  <div class="yoga_main_left">
+    <div class="menu_modle_tit">
+      <div class="menu_modle_new_tab">最新瑜伽资讯</div>
+      <div class="menu_modle_subtit">Yoga News</div>
+    </div>
+
+    <div class="pic_new"  *ngFor="let new of news;" >
+      <img class="cover_img" src="/assets/images/slider/infor-4.jpg" />
+      <div>
+        <div>{{new.title}}</div>
+        <div>{{new.desc}}</div>
+        <div>新华网 14小时前 200阅读 分享</div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="yoga_main_middle">
+    <div class="menu_modle_tit">
+      <div class="menu_modle_new_tab">瑜伽文化</div>
+      <div class="menu_modle_subtit">Yoga culture</div>
+    </div>
+    <div class="hot_new" *ngFor="let cultureItem of yoGaCultrue;" ><i class="dot"></i>{{cultureItem.title}}</div>
+
+  </div>
+
+
+  <div class="yoga_main_right">
+  </div>
+
+</app-lineLayout>
+
+<app-lineLayout [orientType]="'horizontal'">
+
+  <div class="yoga_main_left">
+    <div class="menu_modle_tit">
+      <div class="menu_modle_new_tab">瑜伽老师推荐</div>
+      <div class="menu_modle_subtit">Yoga News</div>
+    </div>
+    <app-lineLayout [orientType]="'horizontal'">
+      <div>
+        <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-1.jpg'">��Ʒ1</app-imageCard>
+      </div>
+      <div>
+        <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+      </div>
+      <div>
+        <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+      </div>
+      <div>
+        <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+      </div>
+    </app-lineLayout>
+
+  </div>
+
+  <div class="yoga_main_middle">
+    <div class="menu_modle_tit">
+      <div class="menu_modle_new_tab">瑜伽书籍</div>
+      <div class="menu_modle_subtit">Yoga books</div>
+    </div>
+    <div class="hot_new" *ngFor="let yogaBook of yoGaBooks;" ><i class="dot"></i>{{yogaBook.title}}</div>
+
+  </div>
+
+  <div class="yoga_main_right">
+  </div>
+
+</app-lineLayout>
+
+
+<app-lineLayout [orientType]="'horizontal'">
+
+  <div class="yoga_main_left">
+    <div class="menu_modle_tit">
+      <div class="menu_modle_new_tab">瑜伽管推荐</div>
+      <div class="menu_modle_subtit">Yoga News</div>
+    </div>
+
+    <app-lineLayout [orientType]="'horizontal'">
+      <div>
+        <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-1.jpg'">��Ʒ1</app-imageCard>
+      </div>
+      <div>
+        <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+      </div>
+      <div>
+        <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+      </div>
+      <div>
+        <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+      </div>
+    </app-lineLayout>
+  </div>
+
+  <div class="yoga_main_middle">
+    <div class="menu_modle_tit">
+      <div class="menu_modle_new_tab">瑜伽流派</div>
+      <div class="menu_modle_subtit">Yoga books</div>
+    </div>
+    <div class="hot_new" *ngFor="let school of yoGaSchool;"><i class="dot"></i>{{school.title}}</div>
+  </div>
+
+  <div class="yoga_main_right">
+  </div>
+
+</app-lineLayout>
+
+
+<div class="footer">
+  <app-lineLayout [orientType]="'horizontal'">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </app-lineLayout>
+  <app-lineLayout [orientType]="'horizontal'">
+    <div></div>
+    <div></div>
+  </app-lineLayout>
+</div>

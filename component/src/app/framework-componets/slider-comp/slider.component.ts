@@ -14,6 +14,8 @@ export class SliderComponent implements OnInit {
 
     @Input() picNames: Array<string>;
 
+    @Input() sildeOptions;
+
     constructor() {
 
 
@@ -21,9 +23,13 @@ export class SliderComponent implements OnInit {
 
     ngAfterViewInit() {
        // this.initView();
+      let that=this;
         // console.log('xxxxxxx' + JSON.stringify(this.picPaths));
        // console.log('xxxxxxx' + JSON.stringify(this.picPaths.length));
-       const mySwiper = new Swiper('.swiper-container', {
+      console.log( JSON.stringify(this.sildeOptions));
+
+      //.title_images >
+       const mySwiper = new Swiper(that.sildeOptions==undefined?"":"."+(that.sildeOptions.parentNodeCls+' > ') +'.swiper-container', {
               autoplay: true,
               mode : 'horizontal',
              // loop: true,
@@ -34,7 +40,7 @@ export class SliderComponent implements OnInit {
              // 移动端使用  simulateTouch:false,
               observer: true,
               observeParents: true,
-              effect : 'slide', // fade cube coverflow flip
+              effect : that.sildeOptions==undefined?'slide':that.sildeOptions['anType'], // fade cube coverflow flip
               pagination: {
                   el: '.swiper-pagination',
                 },
@@ -43,9 +49,10 @@ export class SliderComponent implements OnInit {
                   prevEl: '.swiper-button-prev',
                 },
               // 如果需要滚动条
+              /*
               scrollbar: {
                 el: '.swiper-scrollbar',
-              },
+              },*/
               on: {
                 init: function() {
                   swiperAnimateCache(this); // 隐藏动画元素
@@ -61,9 +68,6 @@ export class SliderComponent implements OnInit {
     }
     ngOnInit () {
          this.picPaths = this.picPaths.toString().split(',');
-
-
-
 
     }
 

@@ -20,6 +20,7 @@ import { DatalistComponent } from './datalist-comp/datalist.component';
 import { SelectComponent } from './select-comp/select.component';
 import { PaginationComponent } from './pagination-comp/pagination.component';
 import { EditorComponent } from './editor-comp/editor.component';
+import {StepsComponent} from './steps-comp/steps.component';
 
 
 
@@ -43,14 +44,15 @@ import { EditorComponent } from './editor-comp/editor.component';
         SelectComponent,
         PaginationComponent,
         EditorComponent,
-        UploaderComponent
+        UploaderComponent,
+        StepsComponent
     ], // 导入模块所依赖的组件、指令等,用于指定这个模块的视图类
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        FormsModule,
         FrameworkRoutingModule,
         FrameworkServiceModule,
-        FormsModule,
         ChartModule,
     ], // 导入当前模块所需要的其他模块
     exports: [
@@ -66,7 +68,8 @@ import { EditorComponent } from './editor-comp/editor.component';
         UploaderComponent,
         CheckboxComponent,
         DatalistComponent,
-        SelectComponent
+        SelectComponent,
+        StepsComponent
     ],
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

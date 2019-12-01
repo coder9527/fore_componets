@@ -1,0 +1,124 @@
+<app-fileHeaderPage tag="0"></app-fileHeaderPage>
+
+<div class="body">
+  <div class="contend">
+    <div class="cate">
+      您的位置：软件下载>电脑游戏>网络游戏>和平精英电脑版免费下载
+    </div>
+    <div class="file_info">
+      <div class="file_head">
+        <div class="file_icon">
+          <img src={{fileInfo.icon}} alt="金山毒霸">
+        </div>
+        <div class="file_tit">{{fileInfo.title}}</div>
+      </div>
+      <div>
+        <ul class="info_ul">
+          <li class="info_li">
+            <div class="li_left">
+              版  本：<span>{{fileInfo.version}}</span>
+            </div>
+            <div>
+              软件授权：<span>{{fileInfo.authorize}}</span>
+            </div>
+          </li>
+          <li class="info_li">
+            <div class="li_left">
+              软件类型：<span>{{fileInfo.softType}}</span>
+            </div>
+            <div>
+              软件语言：<span>{{fileInfo.softLanguage}}</span>
+            </div>
+          </li>
+          <li class="info_li">
+            <div class="li_left">
+              更新时间：<span>{{fileInfo.updateTime}}</span>
+            </div>
+            <div>
+              应用平台：<span>{{fileInfo.applyPlat}}</span>
+            </div>
+          </li>
+          <li class="info_li">
+            <div class="li_left">
+              软件官网：<span>{{fileInfo.softWebsite}}</span>
+            </div>
+            <div>
+              软件大小：<span>{{fileInfo.softSize}}</span>
+            </div>
+          </li>
+          <li class="info_li">
+            <div class="li_left">
+              月下载量：<span>{{fileInfo.monthDownCount}}</span>
+            </div>
+            <div>
+              用户评分：<span>{{fileInfo.score}}分</span>
+            </div>
+          </li>
+          <li class="info_li">
+            <div class="li_left">
+              分享到：<span>QQ</span>
+            </div>
+          </li>
+        </ul>
+        <ul class="info_ul">
+          <li class="info_li">
+            <div class="li_left">
+              <div class="btn_down"  (click)="downloadFile($event)">
+                <img src="http://www.onlinedown.net/css/images/icon/down10261.png" />
+                <div>
+                  <div class="btn_txt">本地下载</div>
+                  <div class="btn_size">大小:{{fileInfo.softSize}}</div>
+                </div>
+              </div>
+            </div>
+            <div>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--tab 页面-->
+    <app-tab [tabItems]="['软件简介','软件截图','网友点评','使用技巧','下载地址']"  (tabIndexCall)="tabEvent($event)" >
+      <div>
+        <div class="text-wrap">
+          <b>rar解压软件下载</b>必选<b>WinRAR</b>，是一款强大的压缩文件管理工具，<b>WinRAR</b>它能解压缩RAR、ZIP和其他格式的压缩文件，并能创建RAR和ZIP格式的压缩文件。<br><h3>WinRAR介绍</h3><br><b>WinRAR</b>是一款功能强大的压缩包管理器，它是档案工具RAR 在 Windows 环境下的图形界面。该软件可用于备份数据，缩减电子邮件附件的大小，解压缩从 Internet 上下载的 RAR、ZIP 2.0 及其它文件，并且可以新建 RAR 及 ZIP 格式的文件。<br>WinRAR 是目前流行的压缩工具，界面友好，使用方便，在压缩率和速度方面都有很好的表现。其压缩率比高，采用了更先进的压缩算法,是现在压缩率较大、压缩速度较快的格式之一。<br>WinRAR 内置程序可以解开 CAB、ARJ、LZH、TAR、GZ、ACE、UUE、BZ2、JAR、ISO、Z和 7Z等多种类型的档案文件、镜像文件和 TAR 组合型文件；具有历史记录和收藏夹功能；新的压缩和加密算法，压缩率进一步提高，而资源占用相对较少，并可针对不同的需要保存不同的压缩配置；固定压缩和多卷自释放压缩以及针对文本类、多媒体类和 PE 类文件的优化算法是大多数压缩工具所不具备的；使用非常简单方便，配置选项也不多，仅在资源管理器中就可以完成你想做的工作；对于 ZIP 和 RAR 的自释放档案文件，点击属性就可以轻易知道此文件的压缩属性，如果有注释，还能在属性中查看其内容；对于 RAR 格式（含自释放）档案文件提供了独有的恢复记录和恢复卷功能，使数据安全得到更充分的保障。<br>WinRAR 是共享软件。任何人都可以在40天的测试期内使用它。如果你希望在测试过期之后继续使用 WinRAR，你必须注册。<br><h3>WinRAR优势特点</h3><br>【压缩率更高】<br>WinRAR 在 DOS 时代就一直具备这种优势，经过多次试验证明，WinRAR 的 RAR 格式一般要比其他的 ZIP 格式高出 10%～30% 的压缩率，尤其是它还提供了可选择的、针对多媒体数据的压缩算法。<br>【对多媒体文件有独特的高压缩率算法】<br>WinRAR 对 WAV、BMP 声音及图像文件可以用独特的多媒体压缩算法大大提高压缩率，虽然我们可以将 WAV、BMP 文件转为 MP3．JPG 等格式节省存储空间，但不要忘记 WinRAR 的压缩可是标准的无损压缩。<br>【能完善地支持ZIP格式并且可以解压多种格式的压缩包】<br>虽然其他软件也能支持 ARJ、LHA 等格式，但却需要外挂对应软件的 DOS 版本，实在是功能有限。但 WinRAR 就不同了，不但能解压多数压缩格式，且不需外挂程序支持就可直接建立 ZIP 格式的压缩文件，所以我们不必担心离开了其他软件如何处理 ZIP 格式的问题。<br>【设置项目非常完善，并且可以定制界面】<br>通过开始选单的程序组启动WinRAR，在其主界面中选择“选项”选单下的“设置”打开设置窗口，分为常规、压缩、路径、文件列表、查看器、综合六大类，非常丰富，通过修改它们，可以更好地使用 WinRAR。实战：如果同时安装了某款压缩软件与 WinRAR，ZIP 文件的关联经常发生混乱，现在我们只需进入设置窗口，选“综合”标签，将“ WinRAR 关联文件”一栏中的 ZIP 一项打勾，确定后就可使 ZIP 文件与 WinRAR 关联，反之如果将勾去掉，则 WinRAR 自动修改注册表使 ZIP 重新与这个压缩软件的关联。<br>【对受损压缩文件的修复能力极强】<br>在网上下载的ZIP、RAR类的文件往往因头部受损的问题导致不能打开，而用WinRAR调入后，只须单击界面中的“修复”按钮就可轻松修复，成功率极高。 　　<br>【辅助功能设置细致】<br>可以在压缩窗口的“备份”标签中设置压缩前删除目标盘文件；可在压缩前单击“估计”按钮对压缩先评估一下；可以为压缩包加注释；可以设置压缩包的防受损功能，等等细微之处也能看出WinRAR的体贴周到。<br>【压缩包可以锁住】<br>双击进入压缩包后，单击命令选单下的“锁定压缩包”就可防止人为的添加、删除等操作，保持压缩包的原始状态。<br>&nbsp;&nbsp;&nbsp;&nbsp;<h3>WinRAR版本更新日志</h3><br>WinRAR 4.20更新日志：<br>1. RAR 压缩的改变:<br>a) RAR 常规压缩算法优化，更好得利用了多处理器核心。单处理器模式中提高一定的速度的同时，多核心环境的压缩结果更好。速度的提升效果依赖于数据类型和平均文件大小。在压缩大文件时多核心利用率更高。<br>b) 为了更快的压缩速度，不得不增加内存的使用。常规 RAR 压缩算法分配大约120 MB 内存，而 WinRAR 4.11 中为 40 MB;<br>c) RAR 文本压缩不能有效得利用多 CPU 核心，所以在多处理器环境中它的性能比常规压缩要低。不管多少个 CPU 数，它的解压缩速度都比常规算法要慢，因此默认禁用了文本算法。<br>如果需要把纯文本数据获得最大程度的压缩率，你可以在“高级压缩参数”对话框中启用文本压缩。点击压缩对话框的“高级”页面的“压缩...”按钮来访问它。你也可以在默认压缩配置中永久修改此选项;命令行模式中可以使用 -mct 开关启用文本压缩;<br>d) “最快”(-m1) 压缩模式现在也支持多处理器核心。4.11 中此模式仅能使用单处理器核心。<br>2. RAR 常规解压缩算法的速度有稍微的提高，Rar 压缩算法的不同会导致不一样。RAR解压缩不能使用多处理器核心，所以它的速度不依赖于核心数。<br>3. ZIP 压缩的改变:<br>a) 现在 ZIP 压缩支持多处理器核心，这样在多核心环境中能获得显著的性能提升。使用单 CPU 时 ZIP 压缩也比 4.11 快;<br>b) ZIP 压缩的内存使用增加到大约 15 MB。<br>4. 恢复卷的创建和处理可以使用多个 CPU 核心来获得更高的处理速度。然而，一般硬盘的寻道速度是恢复卷的一个限制因素，所以使用固态硬盘时效果会更明显。<br>5. 现在 -mt&lt;线程&gt; 的 &lt;线程&gt; 值允许设为 1 - 32, 而不是以前的 0-16。<br>  <br>6. “查找文件”命令可以查找 7-Zip 压缩文件中的数据。以前的“查找文件”不支持 .7z 压缩格式。<br>  <br>7. WinRAR 和 WinRAR 自解压模块不再支持Windows 2000。<br>8. “高级自解压选项”对话框中的“保存当前设置”按钮现在仅在转换现有的压缩文件到自解压文件时可用。此按钮保存是选项仅应用于转换到自解压文件操作。<br>在创建或更新自解压文件时仅使用存储在默认压缩配置中的自解压选项。对于这些操作，忽略“高级自解压选项”对话框中保存的选项。<br>WinRAR4.11 问题修复：<br>a) 已修复WinRAR 在创建 RAR 归档文件时不存储 NTFS“已压缩”属性的问题。<br>b) 已修复如果存在 @filelist 参数却不存在“文件列表”，WinRAR 将在命令行模式下崩溃的问题。此问题仅影响 WinRAR.exe，不影响RAR.exe。<br>c) 已修复在归档时指定 -x*\somefolder\* 例外掩码，而且当前文件夹的名称含有“somefolder”时，WinRAR 排除所有文件并停止创建归档文件的问题。<br>d) 已修复 GUI 自解压归档文件不能在 Windows 预安装环境（Windows PE）下正确 工作的问题。<br>WinRAR4.10 更新内容：<br>1. WinRAR 可以创建几乎任何大小的 ZIP 压缩文件。<br>以前 WinRAR 版本的 2 GB 压缩文件大小和 65535 个文件数的 ZIP 限制不再有效。<br>2. WinRAR 可以创建多卷 ZIP 压缩文件，也被称为拆分 ZIP 文件。<br>ZIP 卷的名字类似于“volname.zip”，“volname.z01”，“volname.z02”。在所有压缩文件中，使用有“.ZIP”文件扩展名的卷来处理开始解压或打开一个压缩文件等操作。和 RAR 卷不一样，ZIP 卷不能自解压。WinRAR 在创建或解压 ZIP 分卷时需要同时访问多卷 ZIP 文件的所有卷，所以不可能在多个移动磁盘上创建或解压 ZIP 卷。你需要在同一文件夹内创建它们。<br>3. 对 ZIP 压缩文件新增高精度文件时间的支持。WinRAR 可以在 ZIP 压缩文件内以 100纳秒的精度存储和解压修改、创建和上次访问的文件时间。<br>你需要在压缩对话框的“时间”部分设置“高精度修改时间”选项，才能在压缩文件存储所有的 3 个时间。在解压对话框中的“高级”部分设置适当的“文件时间”选项选择解压的时间。<br>4. 增加了支持存储 Unicode 文件名到 ZIP 扩展字段数据。不同的ZIP工具存储 Unicode名称位置不同，有的在文件头，有的在扩展字段，现在 WinRAR 可以正确地理这两种类型 Unicode名称。<br>5. “同步压缩文件内容”选项和 -as 命令行开关支持 ZIP 格式。<br>6. 修改 -ag 开关的行为:<br>a) -ag 可以用于所有的 RAR 和 WinRAR 命令，而不再仅限于压缩;<br>b) ‘N’ 格式字符的行为在压缩和非压缩操作中的行为不同。压缩时，它会递归直到找到第一个未使用的名称。在非压缩操作中，如解压，它会在选择已存在的压缩文件向前找第一个未使用的名称;<br>c) ‘I’ 格式字符允许指定分钟，不理会格式字符串中 ‘H’(小时) 的存在和位置。这可以在你想把分钟放小时前面或不需要小时的时候代替 ‘M’(分钟) 。<br>7. 默认情况下，WinRAR 会在查看器修改了打开的文件或创建了新的文件时建议更新压缩文件。在“设置/查看”对话框中的“忽略修改”选项允许禁用此行为。在这里你可以输入以空格分隔的一个或多个文件掩码，如果创建或修改的文件则匹配这些掩码，WinRAR 不会再询问是否要更新压缩文件。<br>8. 分卷大小输入栏的修改。现在你可以在分卷大小右边的下拉列表中选择大小的单位。之前的方法是自己输入 ‘k’, ‘m’ 等定义大小的单位。写在数字大小值后的字符也被支持。<br>9. “定义分卷大小”对话框中“预定义大小”的修改。软盘和 ZIP 盘被 5MB 和 100MB 卷替代，增加了 FAT32 能支持的最大大小和蓝光光盘的大小。<br>10. 在压缩对话框的“选项”页新增“清除设置了密码的文件”选项。如果你总是想安全加密的文件，你可以在默认压缩配置中启用“清除设置了密码的文件”。<br>11. 在“设定/安全”中新增“清除临时文件/仅加密的”选项。它可以让 WinRAR 在认定为加密文件时，使用慢速但安全的方法删除从加密压缩文件解压到临时文件夹中的文件。其它临时文件快速删除。<br>12. “转换压缩文件”命令的修改:<br>a) 现在可以转换加密的压缩文件了。以前“转换压缩文件”命令会跳过它们。不过，如果你还是想跳过它们，你可以通过启用“转换压缩文件”对话框中的“跳过加密的压缩文件”选项做到这一点。它可能在你想在无人值守模式下运行转换命令，避免密码提示时有用;<br>b) 特殊的“rar2”压缩文件类型被移除，这是对 RAR1.x 和 2.x 特定的压缩文件。现在“RAR”压缩文件类型控制所有版本的 RAR 压缩文件的转换。<br>由于转换命令不再需要检测的RAR压缩版本了，初始的搜索压缩文件更快，这样显示“转换压缩文件”对话框前的延迟更短。<br>13. 新的 -log[格式][=名称] 开关允许写入压缩 RAR 和 ZIP 格式的命令处理的压缩文件和文件名到日志文件中，也可用于 RAR 格式的解压、删除和列表命令。<br>当你需要进一步处理由 -ag 或 -v 开关建立的压缩文件时，这个开关特别有用，因为-log 提供了 WinRAR 所生成的压缩文件名。<br>14. 新-@[+]开关允许处理“@”字符开头的所有参数，区分文件名(-@)或(-@+)文件列表。<br>15. “高级自解压选项”对话框的“安装程序”自解压选项从“常规”页移动到“安装”页。“解压后运行”和“解压前运行”现在都可多行，所以可以在同一压缩文件中指定多个安装程序。<br>16. “SetupCode” 自解压脚本命令指示自解压文件等待安装程序的终止并返回退出代码，以增加 1000 作为自解压压缩文件的退出码。图形界面的等效命令是“高级自解压选项”对话框“设置”页面的“等待并返回退出代码”选项。<br>17. 自解压模块不再支持“S”(在开始菜单顶部创建)“快捷方式”命令。新版本的Windows 不允许程序在开始菜单顶部添加项目。<br>18. 在压缩和向导对话框中，可以用十进制指定分卷的大小。十进制的标记由 Windows的地区设置定义。<br>-v命令行开关也允许使用十进位小数。在命令行中模式中，点 (.) 总是作为十进制的标记。例如，v1.5g 开关表示 1.5 GB。<br>&nbsp;&nbsp;&nbsp;&nbsp;						</div>
+      </div>
+      <div>
+        <app-slider  class="img_scroll" picPaths={{picUrls}}  [sildeOptions]="sildeOptions_info" ></app-slider>
+      </div>
+      <div>...</div>
+      <div>...</div>
+      <div></div>
+    </app-tab><!---->
+  </div>
+
+  <!--下载地址-->
+  <div class="contend down_addr">
+    <div>
+      <div class="down_tit">高速下载地址</div>
+      <div class="down_con">
+        <span><img class="down_icon" src="http://www.onlinedown.net/images/icon/smdown.png" />高速下载地址1</span>
+        <span><img class="down_icon" src="http://www.onlinedown.net/images/icon/smdown.png" />高速下载地址2</span>
+      </div>
+      <div class="down_con">
+        <span><img class="down_icon" src="http://www.onlinedown.net/images/icon/smdown.png" />高速下载地址3</span>
+        <span><img class="down_icon" src="http://www.onlinedown.net/images/icon/smdown.png" />高速下载地址4</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="down_tit">普通下载地址</div>
+      <div class="down_con_nomal">
+        <span >普通下载地址1</span>
+        <span >普通下载地址2</span>
+      </div>
+      <div class="down_con_nomal">
+        <span>普通下载地址3</span>
+        <span>普通下载地址4</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-fileTailPage></app-fileTailPage>

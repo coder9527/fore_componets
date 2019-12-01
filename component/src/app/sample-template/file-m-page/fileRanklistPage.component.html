@@ -1,0 +1,143 @@
+<app-fileHeaderPage tag="3"></app-fileHeaderPage>
+
+
+<div class="contend">
+  <!--tab 页面-->
+  <app-tab [tabItems]="['软件排行','PC','安卓应用','苹果应用']"  (tabIndexCall)="tabEvent($event)" >
+    <div class="after_head">
+      <div class="cate_line" #cateline><span class="cate_tit">软件分类</span> <span class="all">全部</span>
+        <span *ngFor="let cateItem of cates;let i=index" (click)="cateClick($event,i+2)">{{cateItem.cateName}}</span>
+      </div>
+      <div class="cate_line" #childcateline><span class="cate_tit">类别分类</span> <span class="all">全部</span>
+        <span *ngFor="let cateItem of childCate;let i=index" (click)="childCateClick($event,i+2)">{{cateItem.cateName}}</span>
+      </div>
+    </div>
+    <div>
+      <div class="sort_tit">
+        <span>全年排行</span>
+        <b>Top 20</b>
+      </div>
+      <div class="list_item">
+        <div class="item_icon_area">
+          <span class="item_icon_no fir">1</span>
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png" />
+        </div>
+        <div class="item_contend">
+          <div>360安全浏览器<span class="item_version">v1.0</span><span class="item_size">大小30M</span></div>
+          <div class="item_cate">分类 <span>5分</span></div>
+          <div class="item_desc">信息描述</div>
+        </div>
+        <div class="item_btn"><div class="btn">软件下载</div></div>
+
+      </div>
+
+      <div class="list_item">
+        <div class="item_icon_area">
+          <span class="item_icon_no sec">2</span>
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png" />
+        </div>
+        <div class="item_contend">
+          <div>360安全浏览器<span class="item_version">v1.0</span><span class="item_size">大小30M</span></div>
+          <div class="item_cate">分类 <span>5分</span></div>
+          <div class="item_desc">信息描述</div>
+        </div>
+        <div class="item_btn"><div class="btn">软件下载</div></div>
+
+      </div>
+
+      <div class="list_item">
+        <div class="item_icon_area">
+          <span class="item_icon_no thir">3</span>
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png" />
+        </div>
+        <div class="item_contend">
+          <div>360安全浏览器<span class="item_version">v1.0</span><span class="item_size">大小30M</span></div>
+          <div class="item_cate">分类 <span>5分</span></div>
+          <div class="item_desc">信息描述</div>
+        </div>
+        <div class="item_btn"><div class="btn">软件下载</div></div>
+
+      </div>
+
+      <div class="list_item">
+        <div class="item_icon_area">
+          <span class="item_icon_no fou">4</span>
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png" />
+        </div>
+        <div class="item_contend">
+          <div>360安全浏览器<span class="item_version">v1.0</span><span class="item_size">大小30M</span></div>
+          <div class="item_cate">分类 <span>5分</span></div>
+          <div class="item_desc">信息描述</div>
+        </div>
+        <div class="item_btn"><div class="btn">软件下载</div></div>
+
+      </div>
+
+      <div class="list_item">
+        <div class="item_icon_area">
+          <span class="item_icon_no">5</span>
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png" />
+        </div>
+        <div class="item_contend">
+          <div>360安全浏览器<span class="item_version">v1.0</span><span class="item_size">大小30M</span></div>
+          <div class="item_cate">分类 <span>5分</span></div>
+          <div class="item_desc">信息描述</div>
+        </div>
+        <div class="item_btn"><div class="btn">软件下载</div></div>
+
+      </div>
+
+
+      <div class="list_item">
+        <div class="item_icon_area">
+          <span class="item_icon_no">6</span>
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png" />
+        </div>
+        <div class="item_contend">
+          <div>360安全浏览器<span class="item_version">v1.0</span><span class="item_size">大小30M</span></div>
+          <div class="item_cate">分类 <span>5分</span></div>
+          <div class="item_desc">信息描述</div>
+        </div>
+        <div class="item_btn"><div class="btn">软件下载</div></div>
+
+      </div>
+
+      <div class="list_item">
+        <div class="item_icon_area">
+          <span class="item_icon_no">7</span>
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png" />
+        </div>
+        <div class="item_contend">
+          <div>360安全浏览器<span class="item_version">v1.0</span><span class="item_size">大小30M</span></div>
+          <div class="item_cate">分类 <span>5分</span></div>
+          <div class="item_desc">信息描述</div>
+        </div>
+        <div class="item_btn"><div class="btn">软件下载</div></div>
+
+      </div>
+
+      <div class="list_item">
+        <div class="item_icon_area">
+          <span class="item_icon_no">8</span>
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png" />
+        </div>
+        <div class="item_contend">
+          <div>360安全浏览器<span class="item_version">v1.0</span><span class="item_size">大小30M</span></div>
+          <div class="item_cate">分类 <span>5分</span></div>
+          <div class="item_desc">信息描述</div>
+        </div>
+        <div class="item_btn"><div class="btn">软件下载</div></div>
+
+      </div>
+
+
+    </div>
+    <div>全月排行榜</div>
+    <div>全周排行榜</div>
+    <div>全天排行榜</div>
+  </app-tab><!---->
+</div>
+
+
+
+<app-fileTailPage></app-fileTailPage>

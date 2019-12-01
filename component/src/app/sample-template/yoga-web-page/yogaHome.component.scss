@@ -1,0 +1,256 @@
+
+
+.head{
+  text-align: -webkit-center;
+ /* background:url('/assets/images/yogores/bc.jpg') no-repeat;*/
+  height: 400px;
+}
+
+.title_images{
+
+}
+
+:host /deep/.title_images>.swiper-container{
+  height:auto;
+  margin-top: -40px;
+  z-index: -1;
+}
+
+:host /deep/.title_images .swiper-button-prev{
+  display: none;
+}
+
+:host /deep/.title_images .swiper-button-next{
+  display: none;
+}
+:host /deep/.title_images .swiper-scrollbar{
+  display: none;
+}
+:host /deep/.title_images .swiper-pagination{
+  display: none;
+}
+
+
+.logo_detail{
+  position: absolute;
+  margin-left: 3vw;
+  margin-top: 4vh;
+  color: #5b9a68;
+  font-weight: bolder;
+}
+
+.site_search{
+  height: 110px;
+  display: flex;
+  opacity: 0.9;
+  position: absolute;
+  margin-top: -13rem;
+  z-index: 3;
+  margin-left: 40vw;
+}
+
+.search_box{
+  height: 35px;
+  width: 230px;
+  border: 1px solid #5b9a68;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.search_btn{
+  background-color: #5b9a68;
+  color: #fff;
+  width: 100px;
+  /* height: 100px; */
+  display: -webkit-box;
+  height: 35px;
+  line-height: 35px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+.yoga_main_left {
+  width: 32vw;
+  margin-left: 10vw;
+  margin-top: 12px;
+  /* margin-left: 10px; */
+  margin-right: 3vw;
+  margin-bottom: 31px;
+
+}
+
+:host /deep/ .toolbar{
+  /*border-bottom: 1px solid #eee;*/
+ /* background-color:#fff;*/
+  color: #fff;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.yoga_main_middle{
+  width:45vw;
+      margin-top: 12px;
+  margin-bottom: 31px;
+}
+
+.yoga_main_right{
+      width:10vw;
+  margin-bottom: 31px;
+}
+.img_scroll{
+  width:650px;
+}
+
+:host /deep/ .img_scroll .swiper-scrollbar{
+  display: none;
+}
+
+.img_adv{
+  width:200px;
+}
+
+
+
+
+
+.contend_h{
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.contend_h > div{
+  border-bottom: 2px solid rgba(0,0,0,0.4);
+  height: 36px;
+  line-height: 36px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #444;
+  width: 73px;
+  text-align: -webkit-center;
+}
+
+
+.hot_new{
+      display: inline-flex;
+    line-height: 24px;
+    height: 24px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 12px;
+    font-size: 17px;
+}
+
+.new_bold{
+
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.hot_new > .dot{
+    left: 0;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: rgba(61, 154, 100, 0.8);
+    margin-top: 9px;
+    margin-right: 9px;
+}
+.yoga_menu{
+  display: flex;
+  width: 100vw;
+  background-color: rgba(61, 154, 100, 0.8);
+  padding-left: 10vw;
+  margin-top: -55px;
+  letter-spacing: 3px;
+}
+.yoga_menu_item{
+  width:10vw;
+  color: rgba(255,255,255,0.9);
+  width: 10vw;
+  height: 45px;
+  font-size: 16px;
+
+  text-align: center;
+  line-height: 45px;
+}
+
+.yoga_menu_item:hover{
+  background: rgba(0,0,0,0.1);
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  color: rgba(255,255,255,1);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.selected{
+  background: rgba(0,0,0,0.1);
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  color: rgba(255,255,255,1);
+  font-weight: bold;
+  font-size: 17px;
+}
+.navFixed{
+  position:fixed;
+  left:0;
+  top:50px;
+  top:expression((offsetParent.scrollTop)+0);
+  z-index:2;
+  background-color: rgba(61, 154, 100, 1);
+}
+
+.search_area_tit {
+  margin-top: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  line-height: 36px;
+  border-top: 1px solid #e5e5e5;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(61, 154, 100, 1);
+}
+
+.search_area{
+  height: 190px;
+  padding-top: 10px;
+  background-color: rgba(61, 154, 100, 1);
+}
+
+.menu_modle_tit{
+
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 18px;
+  font-weight: 700;
+  color: #444;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menu_modle_tit_tab{
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
+  padding-bottom: 11px;
+}
+
+.yoga_video{
+  margin-top: 13px;
+}
+.yoga_audio{
+  margin-top: 13px;
+}
+
+.menu_modle{
+  margin-left: 10vw;
+  margin-right: 10vw;
+  border-top:3px solid #aaaaaa;
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 31px;
+}
+
+.footer{
+  width: 100vw;
+  height: 300px;
+  background-color:rgba(61, 154, 100, 0.8) ;
+}
+

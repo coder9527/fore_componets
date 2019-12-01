@@ -1,0 +1,245 @@
+
+/deep/ body,div,span,ul,li{
+  cursor: pointer;
+}
+/deep/ body{
+  padding: 10px;
+  overflow: hidden;
+}
+//
+.bg_color{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  -webkit-filter: blur(65px);
+  filter: blur(65px);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  background-image: url(../../../assets/images/background/1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.album_img{
+  width: 166px;
+  height: 166px;
+  z-index: 2;
+  border-radius: 83px;
+  position: absolute;
+  top: 6px;
+  left: 206px;
+}
+.album_img_bgImg{
+  z-index: 1;
+  width: 188px;
+  display: inline-block;
+  background-color: #eee;
+  height: 180px;
+  opacity: 0.2;
+  border-radius: 5px;
+}
+.title_set{
+  display: inline-flex;
+  margin-right: 10px;
+}
+
+.title_set_block{
+  font-size: 16px;
+  color: #ffffff;
+  opacity: 0.6;
+  margin-right: 8px;
+}
+.title_set_block:hover{
+  opacity: 1;
+}
+
+.play_body_contend{
+  padding: 35px;
+  padding-left: 100px;
+}
+.btn{
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  width: 115px;
+  opacity: 0.7;
+  vertical-align: middle;
+  height: 40px;
+  margin-right: 15px;
+  padding: 12px 12px;
+}
+.btn:hover{
+  opacity: 1;
+  color: #ffffff;
+}
+.btn_group{
+  padding-bottom:30px;
+}
+.al_center{
+  text-align: center;
+}
+.al_left{
+  text-align: left;
+}
+.al_right{
+  text-align: right;
+}
+.val_bottom{
+  vertical-align: bottom;
+}
+.val_middle{
+  vertical-align: middle;
+}
+.val_middle .btn{
+  line-height: 10px;
+}
+
+.play_controll_bar{
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+  padding-left: 80px;
+  color: #fff;
+  opacity: 0.8;
+}
+.play_bar_heigt{
+  height: 60px;
+}
+.play_bar_control{
+  display: inline-flex;
+  align-items: center;
+  width: 190px;
+}
+.assembly_group{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.assembly_group_icon{
+  font-size: 28px;
+  margin-top: 4px;
+  width: 60px;
+}
+.assembly_group_icon_small{
+  font-size: 18px;
+}
+
+.progress{
+  height: 2px;
+  margin-top: 12px
+}
+.time_point{
+  position: absolute;
+  top: 31px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background-color: #eeeeee;
+  border-radius: 20px;
+}
+.glyphicon{
+  margin-right: 3px;
+}
+
+.table{
+  opacity: 1;
+
+}
+.table tr{
+  color: #ffffff;
+  opacity: 0.5;
+}
+.table tbody tr:hover{
+  opacity: 0.8;
+}
+
+.table tbody tr td{
+  height: 55px;
+  vertical-align: middle;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+.table_h{
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 400px;
+}
+.r_area{
+  color: #fff;
+  opacity: 0.7;
+}
+
+.font_icon{
+  font-size: 21px;;
+}
+.font_icon_bigger{
+  font-size: 28px;
+  width: 100px;
+  text-align: center;
+}
+/**滚动条样式  开始**/
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  opacity: 0.3;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+  opacity: 0.1;
+  border-radius: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(255,255,255,0.5);
+  opacity: 0.1;
+  -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,255,255,0.5);
+}
+/**滚动条样式  结束**/
+.marquee_area{
+  display: block;
+  width: 100%;
+  height: 220px;
+  overflow-y: hidden;
+  margin-top: 20px;
+}
+.play_progress{
+  width: 658px;
+  padding-top: 10px;
+}
+
+.dropdown-menu{
+  display: block;
+  top: 20px;
+  width: 100px;
+  min-width: 100px;
+  right: 25px;
+  left: auto;
+  background-color:rgba(0,0,0,0.1);
+
+  font-size: 12px;
+}
+.dropdown-menu li{
+  text-align: center;
+  color: #fff;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.dropdown-menu li:hover{
+  opacity: 0.9;
+}
+
+.dropdown-menu_area{
+  position: absolute;
+}
+
+.playShow{
+  margin-left: 160px;
+  margin-right: -100px;
+}

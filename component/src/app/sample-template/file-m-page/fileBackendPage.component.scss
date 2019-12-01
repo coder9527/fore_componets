@@ -1,0 +1,59 @@
+.contend {
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+/deep/.tab_header .active{
+  background-color: #288bde;
+  color: #fff;
+}
+
+/deep/ .tab_header{
+  border: 1px solid #eee;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+:host/deep/.frame_tab > .tab_header >.tab_header_item:hover{
+  background-color: #288bde;
+  color: #fff;
+}
+
+/deep/.frame_tab{
+  margin-top: 20px;
+  border: 1px solid #eee;
+}
+
+/deep/ .contends_items > .active{
+  background-color: #fff;
+}
+
+/deep/ .tab_contend{
+  text-align: center;
+}
+
+.cate_table{
+  width:97%;
+  margin: 10px;
+}
+
+.cate_table > tbody>tr>td{
+  border: 1px solid #eee;
+}
+
+
+.input_contend > div{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.label_name{
+  width:95px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 5px;
+}

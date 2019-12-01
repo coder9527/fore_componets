@@ -4,7 +4,7 @@ import { Component, OnInit, Input, Renderer2, ElementRef, ViewChild, ViewChildre
 @Component({
   selector: 'app-tab',
   templateUrl: './tab.component.html',
-  styleUrls: ['./tab.component.css'],
+  styleUrls: ['./tab.component.scss'],
   animations: [
     flyIn
   ]

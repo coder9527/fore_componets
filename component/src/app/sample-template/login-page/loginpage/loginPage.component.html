@@ -1,14 +1,16 @@
-<div>
+
+<div class="login_section">
+  <app-toolbar></app-toolbar>
 	<div class="login_area">
 		<app-lineLayout  [orientType]="'vertaical'">
 			<div class="login_title">账号登录</div>
-			<div><input type="text" class="login_input" /></div>
-			<div><input type="text" class="login_input" /></div>
+			<div><input type="text" class="login_input" placeholder="用户名" /></div>
+			<div><input type="text" class="login_input" placeholder="密 码" /></div>
 			<div> <div id="mpanel1" class="login_valicode" ></div></div>
 			<div><input type="button" value="登 录" class="login_btn" /></div>
 			<div class="login_tail">
 				<app-lineLayout [orientType]="'horizontal'">
-					<div>注册</div>
+					<div>注册 </div>
 					<div> | 忘记密码？</div>
 				</app-lineLayout>
 			</div>
@@ -21,10 +23,10 @@
 				<app-averageLayout [orientType]="'horizontal'" >
 						<div class="login_icon">
 							<span class="fa-stack fa-lg">
-								
+
 							  <i class="fa fa-circle fa-stack-2x"></i>
 							  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-							  
+
 							</span>
 						</div>
 				</app-averageLayout>

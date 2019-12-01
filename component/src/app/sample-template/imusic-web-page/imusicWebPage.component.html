@@ -1,0 +1,104 @@
+<audio id="musicAudio" autoplay="autoplay" loop="loop">
+  <source src="" type="audio/mpeg">
+</audio>
+<div class="bg_color"></div>
+
+
+<!---主体-->
+<div class="row play_body_contend">
+  <!--列表 -->
+  <div  class="col-md-7">
+    <div class="row btn_group val_middle">
+      <div class="btn" (click)="choosFile($event)">
+        <span class="glyphicon glyphicon-cloud-upload"></span>新增
+      </div>
+      <div class="btn">
+        <span class="glyphicon glyphicon-cloud-download"></span>下载
+      </div>
+      <div class="btn" (click)="delItem($event)">
+        <span class="glyphicon glyphicon-minus-sign" ></span> 删除
+      </div>
+      <div class="btn" (click)="clearList($event)">
+        <span class="glyphicon glyphicon-trash"></span>清空列表
+      </div>
+    </div>
+    <div class="row table_h">
+
+      <!-- Table -->
+      <table class="table">
+        <tr>
+          <td><input type="checkbox"  class="checkAll" (click)="checkAll($event)"/></td>
+          <td>歌曲</td>
+          <td>歌手</td>
+          <td>时常</td>
+        </tr>
+
+        <tr  *ngFor="let item of musicList">
+          <td><input type="checkbox" class="checkItem" (click)="checkItem($event)" /></td>
+          <td>{{item.name}}<span class="playShow"> <span (click)="play($event,item)">开始</span><span (click)="stop($event,item)">结束</span></span></td>
+          <td>{{item.author}}</td>
+          <td>{{item.len}}</td>
+        </tr>
+
+      </table>
+
+    </div>
+  </div>
+  <!--播放页面 -->
+  <div  class="col-md-5">
+    <img id="album_pic" class="album_img" src="../../../assets/images/audio/1.jpg" />
+    <div class="al_center">
+      <div class="album_img_bgImg"></div>
+      <img class="album_img" src="../../../assets/images/audio/album_cover_player.png" />
+    </div>
+
+    <div class="al_center r_area">歌曲名:双节棍</div>
+    <div class="al_center r_area">歌手：jay</div>
+    <div class="al_center r_area">专辑名称：范特西</div>
+    <div class="al_center r_area marquee_area">
+      <div id="marquee" class="marquee">
+        <p>让我掉下眼泪的 不止昨夜的酒</p>
+        <p>让我依依不舍的 不止你的温柔</p>
+        <p>余路还要走多久 你攥着我的手</p>
+        <p>让我感到为难的 是挣扎的自由</p>
+        <p>分别总是在九月 回忆是思念的愁</p>
+        <p>深秋嫩绿的垂柳 亲吻着我额头</p>
+        <p>在那座阴雨的小城里 我从未忘记你</p>
+        <p>成都 带不走的 只有你</p>
+        <p>和我在成都的街头走一走</p>
+        <p>直到所有的灯都熄灭了也不停留</p>
+        <p>你会挽着我的衣袖 我会把手揣进裤兜</p>
+        <p>走到玉林路的尽头 坐在(走过)小酒馆的门口</p>
+        <p>我是最后一个</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!---播放控制-->
+<div class="row play_controll_bar">
+  <div class="col-md-2 play_bar_heigt play_bar_control">
+    <div class="font_icon"><span class="glyphicon glyphicon-step-backward"></span></div>
+    <div class="font_icon_bigger"><span class="glyphicon glyphicon-pause"></span></div>
+    <div class="font_icon"><span class="glyphicon glyphicon-step-forward"></span></div>
+  </div>
+  <div class="col-md-6 play_bar_heigt play_progress">
+    <div class="row">
+      <div class="col-md-6 al_left">双节棍</div>
+      <div class="col-md-6 al_right">09:01/10:09</div>
+    </div>
+    <div class="val_bottom">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          <div id="time_point" class="time_point" ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="play_bar_heigt assembly_group">
+      <div class="assembly_group_icon"><span class="glyphicon glyphicon-volume-up"></span></div>
+      <div class="assembly_group_icon assembly_group_icon_small"><span class="glyphicon glyphicon-refresh"></span></div>
+    </div>
+  </div>
+
+</div>

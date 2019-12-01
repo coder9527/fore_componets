@@ -1,17 +1,20 @@
 <div class="frame_tab">
 	<div class="tab_header" #tabHeader>
 		<div  *ngFor="let head of tabItems;let i=index" class="tab_header_item"  (click)="itemClick($event,i)">{{head}}</div>
-	</div>
+
+  </div>
+  <ng-content select=".after_head"></ng-content>
 	<div class="tab_line" #tabLine>
 		<div *ngFor="let head of tabItems;" class="tab_line_item"></div>
 	</div>
+
 	<div class="tab_contend">
 		<div [@flyIn]='flyIn'  class="contends_items" #contends>
-			<ng-content></ng-content>
+			<ng-content select="div"></ng-content>
 		</div>
 	</div>
 </div>
 
 
 
-	
+

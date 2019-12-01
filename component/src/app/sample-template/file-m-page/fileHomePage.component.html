@@ -1,0 +1,190 @@
+<app-fileHeaderPage tag="0"></app-fileHeaderPage>
+
+
+<div class="contend line">
+  <div class="cate_m">
+    <div class="cate_tit">软件分类</div>
+    <div class="cate_block" *ngFor="let cate of cates;">
+      <div class="cate_name">{{cate.cateName}}</div>
+      <div class="cate_line">
+        <span class="cate_item" *ngFor="let childCate of cate.children;">{{childCate.cateName}}</span>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="middle-area">
+    <app-slider  class="img_scroll" picPaths={{picUrls}}  [sildeOptions]="sildeOptions" ></app-slider>
+
+    <div class="new_list">
+      <div class="cate_tit">最新推荐</div>
+      <div class="new_list_line">
+        <div class="new_list_icon"  *ngFor="let new of newsList.slice(0,5);"  (click)="godetail(new.id)">
+            <img src="https://dg1.zol-img.com.cn/51_module_images/19/5b0d269a925c6.png"/>
+            <div class="new_list_tit">{{new.title}}</div>
+            <div class="new_list_date">{{new.updateTime| date:'yyyy-MM-dd'}}</div>
+        </div>
+      </div>
+
+      <div class="new_list_line line_tail">
+        <div class="new_list_icon" *ngFor="let new of newsList.slice(5,9);"  (click)="godetail(new.id)">
+          <img src="https://dg1.zol-img.com.cn/51_module_images/19/5b0d269a925c6.png"/>
+          <div class="new_list_tit">{{new.title}}</div>
+          <div class="new_list_date">{{new.updateTime| date:'yyyy-MM-dd'}}</div>
+        </div>
+
+      </div>
+
+      <div class="new_list_no">
+        <div class="no_item"><span class="no_icon fir">1</span>{{newsList[0].title}}</div>
+        <div class="no_item"><span class="no_icon sec">2</span>{{newsList[1].title}}</div>
+        <div class="no_item"><span class="no_icon thir">3</span>{{newsList[2].title}}</div>
+        <div class="no_item"><span class="no_icon fou">4</span>{{newsList[3].title}}</div>
+      </div>
+
+      <div class="new_list_no">
+        <div class="no_item"><span class="no_icon">5</span>{{newsList[4].title}}</div>
+        <div class="no_item"><span class="no_icon">6</span>{{newsList[5].title}}</div>
+        <div class="no_item"><span class="no_icon">7</span>{{newsList[6].title}}</div>
+        <div class="no_item"><span class="no_icon">8</span>{{newsList[7].title}}</div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <div class="right-area">
+    <div class="right_down_sort">
+
+      <div class="cate_tit">下载排行榜</div>
+      <div class="item_sort"  *ngFor="let rank of rankList.slice(0,5);" >
+        <img  src="https://dg1.zol-img.com.cn/51_module_images/19/5b0d269a925c6.png"/>
+        <div>
+          <div class="item_sort_tit">{{rank.title}}</div>
+          <div class="item_sort_val">推荐得分：{{rank.score}}分</div>
+        </div>
+      </div>
+
+
+     </div>
+
+    <div class="hot_sort">
+      <div class="cate_tit">热门推荐</div>
+
+      <div class="item_hot"   *ngFor="let hot of hotList.slice(0,7);">
+        <span class="item_hot_cate">[网络工具]</span><span class="item_hot_name"> {{hot.title}}</span><span class="item_hot_time">{{hot.updateTime| date:'yyyy-MM'}}</span>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</div>
+
+<div class="contend line">
+  <div class="left_main_area align_center">
+    <div class="cate_tit">电脑必备</div>
+    <div class="ness">
+      <div class="ness_item" *ngFor="let computer of computerList.slice(0,7);">
+        <img class="ness_icon" src="http://src.onlinedown.net/Public/images/logo/382729.png"/>
+        <div class="ness_tit">{{computer.title}}</div>
+      </div>
+
+    </div>
+
+    <div class="ness">
+      <div class="ness_item" *ngFor="let computer of computerList.slice(7,14);">
+        <img class="ness_icon" src="http://src.onlinedown.net/Public/images/logo/382729.png"/>
+        <div class="ness_tit">{{computer.title}}</div>
+      </div>
+    </div>
+
+    <div class="ness">
+      <div class="ness_item" *ngFor="let computer of computerList.slice(14,21);">
+        <img class="ness_icon" src="http://src.onlinedown.net/Public/images/logo/382729.png"/>
+        <div class="ness_tit">{{computer.title}}</div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div class="right-area-rel">
+    <div class="right_down_sort">
+      <div class="cate_tit">本周最热下载</div>
+      <div class="item_sort"  *ngFor="let hot of weekHotList.slice(0,5);">
+        <img  src="https://dg1.zol-img.com.cn/51_module_images/19/5b0d269a925c6.png"/>
+        <div>
+          <div class="item_sort_tit">{{hot.title}}</div>
+          <div class="item_sort_val">下载次数：{{hot.weekDownCount}}次</div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+<div class="contend line">
+  <div class="left_main_area align_center">
+    <div class="cate_tit">手机必备</div>
+
+    <div class="ness">
+      <div class="ness_item" *ngFor="let mobile of mobileList.slice(0,7);">
+        <img class="ness_icon" src="http://src.onlinedown.net/Public/images/logo/382729.png"/>
+        <div class="ness_tit">{{mobile.title}}</div>
+      </div>
+    </div>
+
+    <div class="ness">
+      <div class="ness_item" *ngFor="let mobile of mobileList.slice(7,14);">
+        <img class="ness_icon" src="http://src.onlinedown.net/Public/images/logo/382729.png"/>
+        <div class="ness_tit">{{mobile.title}}</div>
+      </div>
+
+    </div>
+
+    <div class="ness">
+      <div class="ness_item" *ngFor="let mobile of mobileList.slice(14,21);">
+        <img class="ness_icon" src="http://src.onlinedown.net/Public/images/logo/382729.png"/>
+        <div class="ness_tit">{{mobile.title}}</div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="right-area-rel">
+    <div class="right_down_sort">
+      <div class="cate_tit">本月最热下载</div>
+      <div class="item_sort" *ngFor="let hot of monthHotList.slice(0,5);">
+        <img  src="https://dg1.zol-img.com.cn/51_module_images/19/5b0d269a925c6.png"/>
+        <div>
+          <div class="item_sort_tit">{{hot.title}}</div>
+          <div class="item_sort_val">下载次数：{{hot.weekDownCount}}次</div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+
+</div>
+
+<app-fileTailPage></app-fileTailPage>

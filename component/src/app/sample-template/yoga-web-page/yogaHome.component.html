@@ -1,23 +1,226 @@
 <div>
-  <app-toolbar></app-toolbar>
+  <div class="head">
+    <app-toolbar></app-toolbar>
+    <div class="logo_detail">
+      <div>YOGA ONLINE</div>
+      <div>yogo change your life</div>
+    </div>
+    <app-slider  class="title_images" picPaths={{picTitleUrls}}  [sildeOptions]="sildeOptions" ></app-slider>
+    <div class="site_search">
+      <span class="search_icon"></span>
+      <input type="text" class="search_box" />
+      <span class="search_btn">搜 索</span>
+    </div>
+  </div>
 
+  <div class="yoga_menu" #yogaMenu>
+    <div class="yoga_menu_item selected"  (click)="menuClick($event,0)" [routerLink]="['/yoga']">首 页</div>
+    <div class="yoga_menu_item" (click)="menuClick($event,1)" [routerLink]="['/yogaInfo']" >瑜伽资讯</div>
+    <div class="yoga_menu_item" (click)="menuClick($event,2)" [routerLink]="['/YogaVideos']">瑜伽视频</div>
+    <div class="yoga_menu_item" (click)="menuClick($event,3)" [routerLink]="['/YogaAudio']">瑜伽之声</div>
+    <div class="yoga_menu_item" (click)="menuClick($event,4)">伽客群</div>
+    <div class="yoga_menu_item" (click)="menuClick($event,5)">伽客问答</div>
+    <div class="yoga_menu_item" (click)="menuClick($event,6)">瑜伽馆</div>
+    <div class="yoga_menu_item" (click)="menuClick($event,7)">伽客超市</div>
+  </div>
   <app-lineLayout [orientType]="'horizontal'">
     <div class="yoga_main_left">
-      <li>项目一</li>
-      <li>项目一</li>
-      <li>项目一</li>
+      <div class="contend_h">
+        <div>瑜伽资讯</div>
+      </div>
+      <div >
+        <div class="hot_new new_bold"><i class="dot"></i>海南健身瑜伽公开赛将于12月1日至2日在海口开赛</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+
+        <div class="hot_new new_bold"><i class="dot"></i>海南健身瑜伽公开赛将于12月1日至2日在海口开赛</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+
+        <div class="hot_new new_bold"><i class="dot"></i>海南健身瑜伽公开赛将于12月1日至2日在海口开赛</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+
+         <div class="hot_new new_bold"><i class="dot"></i>海南健身瑜伽公开赛将于12月1日至2日在海口开赛</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+        <div class="hot_new"><i class="dot"></i>2018第二届云南抚仙湖国际瑜伽文化节成功举办</div>
+
+      </div>
     </div>
     <div class="yoga_main_middle">
        <app-lineLayout [orientType]="'vertical'">
-         <div class="slide">
-			 <app-slider  picPaths={{picUrls}}></app-slider>
-		</div>
+          <div>
+              <app-slider  class="img_scroll" picPaths={{picUrls}}  [sildeOptions]="sildeOptions_info" ></app-slider>
+              <div>
+                 <img class="img_adv" src="/assets/images/slider/infor-3.jpg" />
+                <img class="img_adv"  src="/assets/images/slider/infor-4.jpg" />
+                <img class="img_adv"  src="/assets/images/slider/infor-4.jpg" />
+              </div>
+          </div>
        </app-lineLayout>
-    </div>
-    <div class="yoga_main_right">
       <app-lineLayout [orientType]="'vertical'">
-           右边的动态
-       </app-lineLayout>
+          <div class="search_area_tit">
+            瑜伽热度
+          </div>
+          <div class="search_area">
+
+          </div>
+      </app-lineLayout>
     </div>
+
+    <div class="yoga_main_right">
+    </div>
+  </app-lineLayout>
+
+
+
+
+
+  <app-lineLayout [orientType]="'horizontal'" >
+    <div class="menu_modle">
+      <div class="menu_modle_tit">
+        <span class="menu_modle_tit_tab">瑜伽视频</span>
+      </div>
+      <div class="yoga_video">
+        <app-lineLayout [orientType]="'horizontal'">
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-1.jpg'">��Ʒ1</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+        </app-lineLayout>
+
+        <app-lineLayout [orientType]="'horizontal'">
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-1.jpg'">��Ʒ1</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+        </app-lineLayout>
+      </div>
+    </div>
+  </app-lineLayout>
+
+
+  <app-lineLayout [orientType]="'horizontal'" >
+    <div class="menu_modle">
+      <div class="menu_modle_tit">
+        <span class="menu_modle_tit_tab">瑜伽之声</span>
+      </div>
+      <div class="yoga_audio">
+        <app-lineLayout [orientType]="'horizontal'">
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-1.jpg'">��Ʒ1</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+          <div>
+            <app-imageCard class="product_item_f" [type]="'vertaical'"  [imagePath]="'/assets/images/slider/infor-2.jpg'">��Ʒ2</app-imageCard>
+          </div>
+        </app-lineLayout>
+      </div>
+    </div>
+  </app-lineLayout>
+
+
+  <app-lineLayout [orientType]="'horizontal'" >
+    <div class="menu_modle">
+      <div class="menu_modle_tit">
+        <span class="menu_modle_tit_tab">伽客群</span>
+      </div>
+      <div class="yoga_video">
+
+      </div>
+    </div>
+  </app-lineLayout>
+
+  <app-lineLayout [orientType]="'horizontal'" >
+    <div class="menu_modle">
+      <div class="menu_modle_tit">
+        <span class="menu_modle_tit_tab">伽客问答</span>
+      </div>
+      <div class="yoga_video">
+
+      </div>
+    </div>
+  </app-lineLayout>
+
+  <app-lineLayout [orientType]="'horizontal'" >
+    <div class="menu_modle">
+      <div class="menu_modle_tit">
+        <span class="menu_modle_tit_tab">瑜伽馆</span>
+      </div>
+      <div class="yoga_video">
+
+      </div>
+    </div>
+  </app-lineLayout>
+
+  <app-lineLayout [orientType]="'horizontal'" >
+    <div class="menu_modle">
+      <div class="menu_modle_tit">
+        <span class="menu_modle_tit_tab">瑜伽超市</span>
+      </div>
+      <div class="yoga_video">
+
+      </div>
+    </div>
+  </app-lineLayout>
+
+</div>
+
+
+<div class="footer">
+  <app-lineLayout [orientType]="'horizontal'">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </app-lineLayout>
+  <app-lineLayout [orientType]="'horizontal'">
+    <div></div>
+    <div></div>
   </app-lineLayout>
 </div>

@@ -1,0 +1,144 @@
+<app-fileHeaderPage tag="2"></app-fileHeaderPage>
+
+
+<div class="contend">
+  <!--tab 页面-->
+  <app-tab [tabItems]="['全部软件','Android','IOS','Windows']"  (tabIndexCall)="tabEvent($event)" >
+
+    <div>
+      <div class="sort_tit">
+        <span>软件最新更新</span>
+        <b>Top 20</b>
+      </div>
+      <div class="item_tit">
+        <div class="item_name">
+          软件名称
+        </div>
+        <div class="item_desc">
+          软件描述
+        </div>
+        <div class="item_size">
+          软件大小
+        </div>
+      </div>
+
+      <div class="item_con" *ngFor="let file of NewAll">
+        <div class="item_name">
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png"/>
+          <div class="item_left_name">
+            <div>{{file.title}}</div>
+            <div>分类：{{file.cateNo}}</div>
+          </div>
+        </div>
+
+        <div class="item_desc">
+         {{file.softDesc}}   </div>
+        <div class="item_size"> {{file.softSize}}</div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div>
+      <div class="sort_tit">
+        <span>Android最新更新</span>
+        <b>Top 20</b>
+      </div>
+      <div class="item_tit">
+        <div class="item_name">
+          软件名称
+        </div>
+        <div class="item_desc">
+          软件描述
+        </div>
+        <div class="item_size">
+          软件大小
+        </div>
+      </div>
+
+      <div class="item_con" *ngFor="let file of NewAndroid">
+        <div class="item_name">
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png"/>
+          <div class="item_left_name">
+            <div>{{file.title}}</div>
+            <div>分类：{{file.cateNo}}</div>
+          </div>
+        </div>
+
+        <div class="item_desc">
+          {{file.softDesc}}   </div>
+        <div class="item_size"> {{file.softSize}}</div>
+
+      </div>
+    </div>
+
+
+    <div>
+      <div class="sort_tit">
+        <span>IOS最新更新</span>
+        <b>Top 20</b>
+      </div>
+      <div class="item_tit">
+        <div class="item_name">
+          软件名称
+        </div>
+        <div class="item_desc">
+          软件描述
+        </div>
+        <div class="item_size">
+          软件大小
+        </div>
+      </div>
+
+      <div class="item_con" *ngFor="let file of NewIos">
+        <div class="item_name">
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png"/>
+          <div class="item_left_name">
+            <div>{{file.title}}</div>
+            <div>分类：{{file.cateNo}}</div>
+          </div>
+        </div>
+
+        <div class="item_desc">
+          {{file.softDesc}}   </div>
+        <div class="item_size"> {{file.softSize}}</div>
+
+      </div>
+    </div>
+    <div>
+      <div class="sort_tit">
+        <span>Windows最新更新</span>
+        <b>Top 20</b>
+      </div>
+      <div class="item_tit">
+        <div class="item_name">
+          软件名称
+        </div>
+        <div class="item_desc">
+          软件描述
+        </div>
+        <div class="item_size">
+          软件大小
+        </div>
+      </div>
+
+      <div class="item_con" *ngFor="let file of NewWindows">
+        <div class="item_name">
+          <img class="item_icon" src="http://thumb10.jfcdns.com/n331x8g2awqm16qka1a/16f5cd37805d6d53.png"/>
+          <div class="item_left_name">
+            <div>{{file.title}}</div>
+            <div>分类：{{file.cateNo}}</div>
+          </div>
+        </div>
+
+        <div class="item_desc">
+          {{file.softDesc}}   </div>
+        <div class="item_size"> {{file.softSize}}</div>
+
+      </div>
+    </div>
+  </app-tab>
+</div>

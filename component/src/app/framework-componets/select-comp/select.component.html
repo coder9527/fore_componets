@@ -1,3 +1,11 @@
-<p>
-  select works!
-</p>
+<div class="selectcmp">
+  <select>
+    <option>测试1</option>
+  </select>
+  <div>
+      <div class="sel_val"  (click)="showItemsEvent()">{{currentItem==undefined?"":currentItem.value}}<i class="sel_cur"><img src="/assets/images/framework-base/ComboBox.png" /></i></div>
+      <div class="sel_item"  *ngIf="showItems" >
+        <div  *ngFor="let option of options;let i=index"  class="item" (click)="checkItemEvent(option,i)"><a>{{option.value}}</a></div>
+      </div>
+  </div>
+</div>

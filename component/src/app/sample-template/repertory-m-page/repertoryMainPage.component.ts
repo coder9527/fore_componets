@@ -11,22 +11,18 @@ import { Component, OnInit } from '@angular/core';
 export class RepertoryMainPageComponent implements OnInit {
 
   private httpClientService: HttpClientService;
-  
+
   private baseService:BaseService;
 
-
   public itemProducts:  Array<any>=[];
-  
-  
+
   private currentProduct:any;
-  //
+
   constructor(httpClientService: HttpClientService) {
     this.httpClientService = httpClientService;
-
   }
 
    ngOnInit() {
-
      let that=this;
      console.log("init:"+JSON.stringify(localStorage.getItem("data")));
      let temp_data=localStorage.getItem("data")==null?[]:JSON.parse(localStorage.getItem("data")) as any;
@@ -36,7 +32,7 @@ export class RepertoryMainPageComponent implements OnInit {
         that.itemProducts.push(temp_data[i]);
       }
   }
-  
+
   public async getRemoteData(){
     let ip=$("#IpAddr").val();
 
@@ -62,10 +58,10 @@ export class RepertoryMainPageComponent implements OnInit {
 
     });
   }
-  
+
   public async updateAll(event:any){
      let that=this;
-    
+
     //更新数据
      let temp_data=localStorage.getItem("data")==null?null:JSON.parse(localStorage.getItem("data")) as any;
      if(null==temp_data){
@@ -82,48 +78,43 @@ export class RepertoryMainPageComponent implements OnInit {
                         //alert("err2:"+JSON.stringify(error));
                         console.log("error");
                         $(".sub_title").text("数据同步失败，请重试！");
-                        
+
                       });
           }
         }
-       
+
      }
-    
-    
-    
-    
-    
     //获取数据
   }
-  
+
   public repertoryUpdate(event:any,operate,product){
     this.currentProduct=product;
   }
-  
+
   public confirmEvent(){
     let product=this.currentProduct as any;
     let in_number=$("#in_number").val();
      let out_number=$("#out_number").val();
         if(parseInt(in_number)>parseInt(out_number)){
           product.countNum=parseInt(product.countNum)+(parseInt(in_number)-parseInt(out_number));
-         
-          
+
+
         }else if(parseInt(out_number)>parseInt(in_number)){
           product.countNum=parseInt(product.countNum)-(parseInt(out_number)-parseInt(in_number))>0?parseInt(product.countNum)-(parseInt(out_number)-parseInt(in_number)):0;
-          
+
         }
-      
-    
+
+
       product.edit=true;
       console.log("last:"+JSON.stringify(product));
       let temp_data=JSON.parse(localStorage.getItem("data")) as any;
-     
+
       for(let i=0;i<temp_data.length;i++){
         if(temp_data[i].id==product.id){
           temp_data[i]=product;
         }
       }
-      
+
        localStorage.setItem("data",JSON.stringify(temp_data));
         $("#myModal").hide();
         $(".modal-backdrop").hide();

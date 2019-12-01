@@ -1,17 +1,19 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
+        <div class="sw_tit">abc标题</div>
         <div class="swiper-slide" *ngFor="let url of picPaths" >
         	<img src={{url}} />
         	<!-- <p class="ani poi" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">内容ceshi</p> -->
         </div>
+
     </div>
     <!-- 如果需要分页器-->
    <div class="swiper-pagination" slot="pagination"></div>
 
-    <!-- 如果需要导航按钮--> 
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    
+    <!-- 如果需要导航按钮-->
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
+
     <!-- 如果需要滚动条 -->
     <div class="swiper-scrollbar"></div>
 </div>

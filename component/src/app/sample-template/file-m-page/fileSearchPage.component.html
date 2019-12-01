@@ -1,0 +1,32 @@
+<app-fileHeaderPage></app-fileHeaderPage>
+
+<div class="contend">
+
+
+  <div>
+    <div class="sort_tit">
+      <span>软件搜索</span>
+      <b>More</b>
+    </div>
+    <div class="list_item" *ngFor="let file of fileList;let i=index"  (click)="godetail(file.id)">
+      <div class="item_icon_area">
+        <span class="item_icon_no fir">{{i+1}}</span>
+        <img class="item_icon" src="{{file.icon}}" />
+      </div>
+      <div class="item_contend">
+        <div>{{file.title}}<span class="item_version">v1.0</span><span class="item_size">大小30M</span></div>
+        <div class="item_cate">分类 <span>5分</span></div>
+        <div class="item_desc">{{file.softDesc}}</div>
+      </div>
+      <div class="item_btn"><div class="btn">软件下载</div></div>
+
+    </div>
+
+
+
+  </div>
+</div>
+
+
+
+<app-fileTailPage></app-fileTailPage>

@@ -1,0 +1,94 @@
+<h1>管理后台服务</h1>
+<div class="contend">
+  <app-dialog>
+    <div>
+      <div><span class="label_name">分类名称:</span> <input type="text" [(ngModel)]="cate.cateName" /></div>
+      <div><span class="label_name">分类编码: </span><input type="text"  [(ngModel)]="cate.cateNo" /></div>
+      <div><span class="label_name">父分类: </span><input type="text"  [(ngModel)]="cate.parentId" /></div>
+
+      <input type="button" value="提交" (click)="addCate($event)" />
+    </div>
+  </app-dialog>
+
+
+
+<app-tab [tabItems]="['分类列表','文件列表','新增文件','新增分类']"  (tabIndexCall)="tabEvent($event)" >
+  <div class="input_contend">
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">新增分类</button>
+    <table class="cate_table">
+      <tr><td><b>分类名称</b></td><td><b>分类编码</b></td><td><b>父类编码</b></td><td><b>操作</b></td></tr>
+      <tr    *ngFor="let cateitem of cateslist" >
+        <td>{{cateitem.cateName}}</td>
+        <td>{{cateitem.cateNo}}</td>
+        <td>{{cateitem.parentId}}</td>
+        <td><span>编辑</span>&nbsp;&nbsp;<span>删除</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="input_contend">
+    <button>新增文件</button>
+    <table class="cate_table">
+      <tr><td><b>文件名称</b></td><td><b>分类编码</b></td><td><b>应用平台</b></td><td><b>操作</b></td></tr>
+      <tr    *ngFor="let fileitem of filelist" >
+        <td>{{fileitem.title}}</td>
+        <td>{{fileitem.cateNo}}</td>
+        <td>{{fileitem.applyPlat}}</td>
+        <td><span>编辑</span>&nbsp;&nbsp;<span>删除</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="input_contend">
+    <div> <img width="80px"  id="myimg" src="" alt=""></div>
+     <div><span class="label_name">文件图标:</span>
+       <input type="file"    (change)="imgChange($event,this)" accept="image/png,image/gif,image/jpeg"/>
+     </div>
+
+
+
+     <div><span class="label_name">文件版本:</span> <input type="text" [(ngModel)]="file.version" /></div>
+     <div><span class="label_name">授权:</span> <input type="text" [(ngModel)]="file.authorize" /></div>
+    <div><span class="label_name">文件分类:</span>
+      <select [(ngModel)]="file.cateNo">
+        <option *ngFor="let cate of cates;" value={{cate.cateNo}} >{{cate.cateName}}</option>
+      </select>
+    </div>
+    <div>
+      <span class="label_name">软件语言:</span>
+      <select [(ngModel)]="file.softLanguage">
+        <option>中文</option>
+        <option>英文</option>
+      </select>
+    </div>
+    <div>
+      <span class="label_name">软件平台:</span>
+      <select [(ngModel)]="file.applyPlat">
+        <option>windows</option>
+        <option>ios</option>
+        <option>android</option>
+      </select>
+    </div>
+    <div><span class="label_name">软件网站:</span> <input type="text" [(ngModel)]="file.softWebsite" /></div>
+    <div><span class="label_name">软件大小: </span><input type="text"  [(ngModel)]="file.softSize" /></div>
+    <div><span class="label_name">软件描述: </span><input type="text"  [(ngModel)]="file.softDesc"  /></div>
+    <div><span class="label_name">软件下载地址:</span> <input type="text"  /></div>
+    <app-uploader [uploadCfg]="uploadCfg"  [(ngModel)]="uploadCfg.fileInfo" ></app-uploader>
+    <div><span class="label_name">软件名称:</span><label>{{uploadCfg.fileInfo.fileName}}</label></div>
+    <div><span class="label_name">上传文件编码:</span><label>{{uploadCfg.fileInfo.fileNameCode}}</label></div>
+
+
+    <input type="button" value="提交" (click)="addFile($event)" />
+  </div>
+  <div class="input_contend">
+    <div><span class="label_name">分类名称:</span> <input type="text" [(ngModel)]="cate.cateName" /></div>
+    <div><span class="label_name">分类编码: </span><input type="text"  [(ngModel)]="cate.cateNo" /></div>
+    <div><span class="label_name">父分类: </span><input type="text"  [(ngModel)]="cate.parentId" /></div>
+
+    <input type="button" value="提交" (click)="addCate($event)" />
+  </div>
+
+
+</app-tab>
+</div>
+

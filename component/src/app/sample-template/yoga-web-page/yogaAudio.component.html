@@ -1,0 +1,24 @@
+<div class="head">
+  <app-toolbar></app-toolbar>
+  <div class="logo_detail">
+    <div>梵 韵 瑜 伽</div>
+    <div>yogo change your life</div>
+  </div>
+  <div class="site_search">
+    <span class="search_icon"></span>
+    <input type="text" class="search_box" />
+    <span class="search_btn">搜 索</span>
+  </div>
+</div>
+
+
+<div class="yoga_menu" #yogaMenu>
+  <div class="yoga_menu_item"  (click)="menuClick($event,0)" [routerLink]="['/yoga']" >首 页</div>
+  <div class="yoga_menu_item"  (click)="menuClick($event,1)" [routerLink]="['/yogaInfo']" >瑜伽资讯</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,2)" [routerLink]="['/YogaVideos']">瑜伽视频</div>
+  <div class="yoga_menu_item selected" (click)="menuClick($event,3)" [routerLink]="['/YogaAudio']" >瑜伽之声</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,4)">伽客群</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,5)">伽客问答</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,6)">瑜伽馆</div>
+  <div class="yoga_menu_item" (click)="menuClick($event,7)">伽客超市</div>
+</div>

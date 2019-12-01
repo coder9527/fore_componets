@@ -1,3 +1,5 @@
+
+
 .frame_tab{
 	width:100%;
 }
@@ -39,7 +41,7 @@
 .tab_line .active{
 	width:100px;
 	height:1px;
-	border-bottom:1px solid #00a;
+	/*border-bottom:1px solid #00a;*/
 	line-height:0px;
 }
 
@@ -50,12 +52,12 @@
 	/*width:200px;*/
 	width:100%;
 	background-color:#eee;
-	
+
 }
-:host /deep/.contends_items > div{
+/deep/.contends_items > div{
 	display:none;
 }
 
-:host /deep/.contends_items > .active{
+/deep/.contends_items > .active{
 	display:block;
 }

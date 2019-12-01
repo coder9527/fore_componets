@@ -1,0 +1,22 @@
+<div class="header">
+  <div class="contend">
+    <div class="logo"><img src="../../../assets/images/file/logo.png"></div>
+    <div class="search_area">
+      <input type="text" class="search_txt" #searchVal />
+      <button class="search_btn" name="button" (click)="gosearch()">
+        搜 索
+      </button>
+      <div class="seacher_labels">热搜词：<span class="label">谷歌浏览器</span> <span class="label">爱奇艺</span></div>
+    </div>
+  </div>
+</div>
+<div class="file_menu" #fileMenu>
+  <div class="file_menu_item"  (click)="menuClick($event,0)" [routerLink]="['/fileHome']">首 页</div>
+  <div class="file_menu_item" (click)="menuClick($event,1)" [routerLink]="['/fileNess']" >装机必备</div>
+  <div class="file_menu_item" (click)="menuClick($event,2)" [routerLink]="['/fileNews']">最新更新</div>
+  <div class="file_menu_item" (click)="menuClick($event,3)" [routerLink]="['/fileRank']">下载排行</div>
+ <!-- <div class="file_menu_item" (click)="menuClick($event,4)" [routerLink]="['/fileCate']">软件分类</div>-->
+  <!-- <div class="file_menu_item" (click)="menuClick($event,5)">手机软件&nbsp;&nbsp;&nbsp;&nbsp; </div>-->
+  <!-- <div class="file_menu_item" (click)="menuClick($event,7)">驱动下载&nbsp;&nbsp;&nbsp;&nbsp; </div>-->
+  <!--<div class="file_menu_item" (click)="menuClick($event,7)">软件资讯&nbsp;&nbsp;&nbsp;&nbsp; </div>-->
+</div>

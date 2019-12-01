@@ -28,4 +28,23 @@ export class BaseService {
       });
   }
 
+
+    /**
+     *
+     *uuid 生成器
+     */
+   public async guid() {
+
+      return await new Promise(resolve => {
+        let temp= 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+          var r = Math.random() * 16 | 0,
+            v = c == 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+        });
+        resolve(temp);
+      })
+
+
+}
+
 }
